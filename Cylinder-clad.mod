@@ -174,7 +174,7 @@ MODULE Clad_Cylinder
     PROC Feedback()
         ClkStop myclock;
         reg1:=ClkRead(myclock);
-        reg2:=lineweld_2.trans.x-lineweld_1.trans.x;
+        reg2:=abs(lineweld_2.trans.x-lineweld_1.trans.x);
         IF reg1<=0 THEN
             reg1:=1;
         ENDIF
